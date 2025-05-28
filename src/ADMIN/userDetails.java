@@ -23,6 +23,7 @@ public class userDetails extends javax.swing.JFrame {
      * Creates new form adminDashboard
      */
     public userDetails() {
+        setUndecorated(true);
         initComponents();
     }    
 
@@ -100,7 +101,7 @@ public class userDetails extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         uid = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        back2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -163,15 +164,25 @@ public class userDetails extends javax.swing.JFrame {
         });
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 43));
 
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("BACK");
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+        back1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        back1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        back1.setText("BACK");
+        back1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
+                back1MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 80, 26));
+        jPanel1.add(back1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 420, 80, 26));
+
+        back2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        back2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        back2.setText("BACK");
+        back2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                back2MouseClicked(evt);
+            }
+        });
+        jPanel1.add(back2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 80, 26));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 450));
 
@@ -190,11 +201,11 @@ public class userDetails extends javax.swing.JFrame {
         }  
     }//GEN-LAST:event_formWindowActivated
 
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+    private void back1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back1MouseClicked
         User_dashboard ud = new User_dashboard();
         ud.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jLabel9MouseClicked
+    }//GEN-LAST:event_back1MouseClicked
 
     private void changepassMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_changepassMouseClicked
         changePass cp = new changePass();
@@ -230,6 +241,12 @@ public class userDetails extends javax.swing.JFrame {
         
     }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void back2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back2MouseClicked
+     Admin_dashboard a = new Admin_dashboard();
+     a.setVisible(true);
+     this.dispose();
+    }//GEN-LAST:event_back2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -269,6 +286,8 @@ public class userDetails extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static final javax.swing.JLabel back1 = new javax.swing.JLabel();
+    public javax.swing.JLabel back2;
     private javax.swing.JLabel changepass;
     private javax.swing.JTextField em;
     private javax.swing.JLabel iddisplay;
@@ -276,7 +295,6 @@ public class userDetails extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField uid;
     private javax.swing.JTextField un;

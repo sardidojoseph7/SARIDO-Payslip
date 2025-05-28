@@ -23,6 +23,7 @@ public class Admin_dashboard extends javax.swing.JFrame {
      * Creates new form Admin_dashboard
      */
     public Admin_dashboard() {
+        setUndecorated(true);
         initComponents();
         displayLogs();
     }
@@ -53,6 +54,11 @@ public class Admin_dashboard extends javax.swing.JFrame {
         logtbl = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        Attendance = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         username = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
@@ -78,14 +84,14 @@ public class Admin_dashboard extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton3.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jButton3.setText("Settings");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 100, 40));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 20, 120, 40));
 
         logtbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -97,24 +103,70 @@ public class Admin_dashboard extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(logtbl);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 70, 600, 260));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 600, 350));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jButton1.setText("USERS");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 100, 40));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 120, -1));
 
+        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton2.setText("LOGOUT");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 20, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(683, 20, 90, 40));
+
+        Attendance.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        Attendance.setText("Attendance");
+        Attendance.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AttendanceActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Attendance, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 120, -1));
+
+        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jButton4.setText("Salaries");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 120, -1));
+
+        jButton5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jButton5.setText("Payslips");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 120, -1));
+
+        jButton6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jButton6.setText("View Payslip");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 120, 30));
+
+        jButton7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jButton7.setText("Payslip Requests");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 120, 30));
 
         username.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         username.setForeground(new java.awt.Color(255, 255, 255));
@@ -125,18 +177,18 @@ public class Admin_dashboard extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("ADMIN ID:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, -1, -1));
 
         ID.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         ID.setForeground(new java.awt.Color(255, 255, 255));
         ID.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 40, 20));
+        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 40, 20));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/USER/Image/Staff.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/USER/Image/bk3.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 340));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 500));
 
         pack();
         setLocationRelativeTo(null);
@@ -178,8 +230,40 @@ if (sess.getId() == 0) {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         userDetails ud = new userDetails();
         ud.setVisible(true);
+        
+        ud.back1.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void AttendanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AttendanceActionPerformed
+       attendance aa = new attendance();
+       aa.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_AttendanceActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+      SalaryForm ss = new SalaryForm();
+      ss.setVisible(true);
+      this.dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        GeneratePayslipForm gg = new GeneratePayslipForm();
+        gg.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        ViewPayslip vv = new ViewPayslip();
+        vv.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        PayslipRequests pp = new PayslipRequests();
+        pp.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,10 +301,15 @@ if (sess.getId() == 0) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Attendance;
     private javax.swing.JLabel ID;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

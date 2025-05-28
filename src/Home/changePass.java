@@ -25,6 +25,7 @@ public class changePass extends javax.swing.JFrame {
      * Creates new form adminDashboard
      */
     public changePass() {
+        setUndecorated(true);
         initComponents();
     }   
     Color hovercolor = new Color (255,204,204);

@@ -24,6 +24,7 @@ public class Register_user extends javax.swing.JFrame {
      * Creates new form Register_user
      */
     public Register_user() {
+        setUndecorated(true);
         initComponents();
     }
     public String question = "";

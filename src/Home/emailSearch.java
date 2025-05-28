@@ -20,6 +20,7 @@ public class emailSearch extends javax.swing.JFrame {
      * Creates new form adminDashboard
      */
     public emailSearch() {
+        setUndecorated(true);
         initComponents();
     }    
 

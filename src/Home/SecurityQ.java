@@ -20,6 +20,7 @@ public class SecurityQ extends javax.swing.JFrame {
      * Creates new form adminDashboard
      */
     public SecurityQ() {
+        setUndecorated(true);
         initComponents();
     }    
 
